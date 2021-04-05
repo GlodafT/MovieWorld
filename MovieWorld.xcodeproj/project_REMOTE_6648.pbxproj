@@ -25,7 +25,6 @@
 		03E0A844261B482C00BD04B4 /* MWRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A843261B482C00BD04B4 /* MWRowCell.swift */; };
 		03E0A847261B484800BD04B4 /* MWMainMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A846261B484800BD04B4 /* MWMainMovieCell.swift */; };
 		03E0A84A261B486000BD04B4 /* MWMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A849261B486000BD04B4 /* MWMovie.swift */; };
-		1021EEED2616495D00EB6E9D /* MWMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021EEEC2616495D00EB6E9D /* MWMovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +47,6 @@
 		03E0A843261B482C00BD04B4 /* MWRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWRowCell.swift; sourceTree = "<group>"; };
 		03E0A846261B484800BD04B4 /* MWMainMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMainMovieCell.swift; sourceTree = "<group>"; };
 		03E0A849261B486000BD04B4 /* MWMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMovie.swift; sourceTree = "<group>"; };
-		1021EEEC2616495D00EB6E9D /* MWMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +173,6 @@
 		03C41DF52615FD510055D985 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				1021EEEA2616491E00EB6E9D /* Views */,
 				03C41E0F26163FA00055D985 /* Models */,
 				03C41DF62615FD5F0055D985 /* Controllers */,
 			);
@@ -231,22 +228,6 @@
 				03E0A846261B484800BD04B4 /* MWMainMovieCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1021EEEA2616491E00EB6E9D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1021EEEB2616492800EB6E9D /* Cell */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		1021EEEB2616492800EB6E9D /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				1021EEEC2616495D00EB6E9D /* MWMovieCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,7 +308,6 @@
 			files = (
 				03C41DF82615FD6C0055D985 /* MWMoviesController.swift in Sources */,
 				03C41DBD2615DBFC0055D985 /* MWViewController.swift in Sources */,
-				1021EEED2616495D00EB6E9D /* MWMovieCell.swift in Sources */,
 				03C41E1326163FCA0055D985 /* MWMovieModel.swift in Sources */,
 				03E0A83F261B47BE00BD04B4 /* MWMainViewController.swift in Sources */,
 				03E0A84A261B486000BD04B4 /* MWMovie.swift in Sources */,
@@ -479,7 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XDCZYGXBGA;
+				DEVELOPMENT_TEAM = KG39R2KX5K;
 				INFOPLIST_FILE = MovieWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,7 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XDCZYGXBGA;
+				DEVELOPMENT_TEAM = KG39R2KX5K;
 				INFOPLIST_FILE = MovieWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
