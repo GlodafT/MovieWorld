@@ -26,6 +26,12 @@
 		03E0A847261B484800BD04B4 /* MWMainMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A846261B484800BD04B4 /* MWMainMovieCell.swift */; };
 		03E0A84A261B486000BD04B4 /* MWMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A849261B486000BD04B4 /* MWMovie.swift */; };
 		1021EEED2616495D00EB6E9D /* MWMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021EEEC2616495D00EB6E9D /* MWMovieCell.swift */; };
+		10E60FEF261B80C0008BF60F /* MWPopularMoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E60FEE261B80C0008BF60F /* MWPopularMoviesResponse.swift */; };
+		10E60FF9261B8186008BF60F /* MWNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E60FF8261B8186008BF60F /* MWNetwork.swift */; };
+		10E60FFC261B858D008BF60F /* Url+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E60FFB261B858D008BF60F /* Url+Ex.swift */; };
+		10E60FFF261B920B008BF60F /* MWUrlPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E60FFE261B920B008BF60F /* MWUrlPaths.swift */; };
+		10E61002261DC222008BF60F /* MWUpcomingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E61001261DC222008BF60F /* MWUpcomingResponseModel.swift */; };
+		10E61006261DCB38008BF60F /* MWTopRatedResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E61005261DCB38008BF60F /* MWTopRatedResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,12 @@
 		03E0A846261B484800BD04B4 /* MWMainMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMainMovieCell.swift; sourceTree = "<group>"; };
 		03E0A849261B486000BD04B4 /* MWMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMovie.swift; sourceTree = "<group>"; };
 		1021EEEC2616495D00EB6E9D /* MWMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMovieCell.swift; sourceTree = "<group>"; };
+		10E60FEE261B80C0008BF60F /* MWPopularMoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPopularMoviesResponse.swift; sourceTree = "<group>"; };
+		10E60FF8261B8186008BF60F /* MWNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWNetwork.swift; sourceTree = "<group>"; };
+		10E60FFB261B858D008BF60F /* Url+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Url+Ex.swift"; sourceTree = "<group>"; };
+		10E60FFE261B920B008BF60F /* MWUrlPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWUrlPaths.swift; sourceTree = "<group>"; };
+		10E61001261DC222008BF60F /* MWUpcomingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWUpcomingResponseModel.swift; sourceTree = "<group>"; };
+		10E61005261DCB38008BF60F /* MWTopRatedResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWTopRatedResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,7 @@
 				03C41DDD2615E10E0055D985 /* UIView+Ex.swift */,
 				03C41DE02615E13B0055D985 /* UIEdgeInsets+Ex.swift */,
 				03C41E1626163FEE0055D985 /* Date+Ex.swift */,
+				10E60FFB261B858D008BF60F /* Url+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 		03C41DD52615DE2D0055D985 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				10E60FF2261B814F008BF60F /* Network */,
 				03C41DE32615E1AA0055D985 /* Navigation */,
 				03C41DD72615DE3A0055D985 /* Views */,
 				03C41DD62615DE350055D985 /* Controllers */,
@@ -220,6 +234,9 @@
 			isa = PBXGroup;
 			children = (
 				03E0A849261B486000BD04B4 /* MWMovie.swift */,
+				10E60FEE261B80C0008BF60F /* MWPopularMoviesResponse.swift */,
+				10E61001261DC222008BF60F /* MWUpcomingResponseModel.swift */,
+				10E61005261DCB38008BF60F /* MWTopRatedResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +264,15 @@
 				1021EEEC2616495D00EB6E9D /* MWMovieCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		10E60FF2261B814F008BF60F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				10E60FF8261B8186008BF60F /* MWNetwork.swift */,
+				10E60FFE261B920B008BF60F /* MWUrlPaths.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,8 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E60FEF261B80C0008BF60F /* MWPopularMoviesResponse.swift in Sources */,
 				03C41DF82615FD6C0055D985 /* MWMoviesController.swift in Sources */,
+				10E60FF9261B8186008BF60F /* MWNetwork.swift in Sources */,
+				10E60FFF261B920B008BF60F /* MWUrlPaths.swift in Sources */,
+				10E61006261DCB38008BF60F /* MWTopRatedResponseModel.swift in Sources */,
 				03C41DBD2615DBFC0055D985 /* MWViewController.swift in Sources */,
+				10E61002261DC222008BF60F /* MWUpcomingResponseModel.swift in Sources */,
 				1021EEED2616495D00EB6E9D /* MWMovieCell.swift in Sources */,
 				03C41E1326163FCA0055D985 /* MWMovieModel.swift in Sources */,
 				03E0A83F261B47BE00BD04B4 /* MWMainViewController.swift in Sources */,
@@ -335,6 +366,7 @@
 				03C41E1726163FEE0055D985 /* Date+Ex.swift in Sources */,
 				03C41DE12615E13B0055D985 /* UIEdgeInsets+Ex.swift in Sources */,
 				03C41DB92615DBFC0055D985 /* AppDelegate.swift in Sources */,
+				10E60FFC261B858D008BF60F /* Url+Ex.swift in Sources */,
 				03E0A839261B476000BD04B4 /* MWMainTabBarController.swift in Sources */,
 				03C41DE82615F0CD0055D985 /* MWInterface.swift in Sources */,
 				03C41DEF2615FAE10055D985 /* MWInitViewController.swift in Sources */,
