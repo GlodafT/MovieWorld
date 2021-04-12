@@ -47,3 +47,4 @@ class MWMovie: Decodable {
         self.overview = try container.decodeIfPresent(String.self, forKey: .overview)
     }
 }
+

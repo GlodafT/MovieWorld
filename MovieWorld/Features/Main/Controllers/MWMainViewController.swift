@@ -17,6 +17,8 @@ class MWMainViewController: MWViewController {
 
     private var movies: [MovieCategory: [MWMovie]] = [:]
 
+    private lazy var dispathGroup = DispatchGroup()
+
     private lazy var refreshControl: UIRefreshControl = {
         let control = UIRefreshControl()
         control.tintColor = UIColor(named: "accentColor")
@@ -51,37 +53,56 @@ class MWMainViewController: MWViewController {
             make.edges.equalToSuperview()
         }
 
-        self.sendPopularMoviesRequest()
-        self.sendUpcomingRequest()
-        self.sendTopRatedRequest()
+        sendMovieRequests()
     }
 
     @objc private func refreshPulled() {
+        sendMovieRequests()
+    }
+
+    private func sendMovieRequests() {
         self.sendPopularMoviesRequest()
         self.sendUpcomingRequest()
         self.sendTopRatedRequest()
+
+        self.dispathGroup.notify(queue: .main) {
+            Swift.debugPrint("DISPATH GROUP FINISHED WORK")
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - requests
 
     private func sendUpcomingRequest() {
-        MWNetwork.sh.requestAlamofire(urlPath: MWUrlPaths.upcomingMovies) { [weak self] (upcomingMoviesModel: MWUpcomingResponseModel) in
-            self?.handleResponse(for: .upcoming, movies: upcomingMoviesModel.results)
+        self.dispathGroup.enter()
 
-        } errorHandler: { [weak self] (error: MWNetError) in
-            self?.handleError(error: error)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            MWNetwork.sh.requestAlamofire(urlPath: MWUrlPaths.upcomingMovies) { [weak self] (upcomingMoviesModel: MWUpcomingResponseModel) in
+                self?.handleResponse(for: .upcoming, movies: upcomingMoviesModel.results)
+
+            } errorHandler: { [weak self] (error: MWNetError) in
+                self?.handleError(error: error)
+            }
         }
+
     }
 
     private func sendTopRatedRequest() {
+        self.dispathGroup.enter()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
         MWNetwork.sh.requestAlamofire(urlPath: MWUrlPaths.topRatedMovies) { [weak self] (topRatedMoviesModel: MWTopRatedReponseModel) in
             self?.handleResponse(for: .topRated, movies: topRatedMoviesModel.results)
         } errorHandler: { [weak self] (error: MWNetError) in
             self?.handleError(error: error)
         }
     }
+    }
 
     private func sendPopularMoviesRequest() {
+        self.dispathGroup.enter()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
         MWNet.sh.requestAlamofire(
             urlPath: MWUrlPaths.popularMovies,
             parameters: nil,
@@ -91,6 +112,7 @@ class MWMainViewController: MWViewController {
             errorHandler: { [weak self] (error: MWNetError) in
                 self?.handleError(error: error)
             })
+    }
     }
 
     // MARK: - handling responses
@@ -102,10 +124,12 @@ class MWMainViewController: MWViewController {
 
         self.movies[category] = movies
 
-        self.tableView.reloadData()
+        self.dispathGroup.leave()
     }
 
     private func handleError(error: MWNetError) {
+        self.dispathGroup.leave()
+        
         if self.refreshControl.isRefreshing {
             self.refreshControl.endRefreshing()
         }
