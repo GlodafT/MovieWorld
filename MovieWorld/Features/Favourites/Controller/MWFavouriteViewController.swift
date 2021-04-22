@@ -7,9 +7,11 @@
 
 import UIKit
 
+
+
 class MWFavouriteViewController: MWViewController {
 
-    var movies: [MWMovie] = []
+    var movies: [MWMovie] = MWDB.sh.loadMovies()
 
     var requestRandomMovie: (() -> MWMovie?)?
 
@@ -58,6 +60,7 @@ class MWFavouriteViewController: MWViewController {
         if let movie = self.requestRandomMovie?() {
             self.movies.append(movie)
             self.collectionView.reloadData()
+            MWDB.sh.save(movie: movie)
         }
     }
 }
@@ -79,6 +82,7 @@ extension MWFavouriteViewController: UICollectionViewDelegate, UICollectionViewD
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        MWDB.sh.delite([self.movies[indexPath.row]])
         self.movies.remove(at: indexPath.row)
         collectionView.deleteItems(at: [indexPath])
     }

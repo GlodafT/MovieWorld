@@ -36,6 +36,13 @@
 		03E0A867261B51F800BD04B4 /* MWUrlPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A866261B51F800BD04B4 /* MWUrlPaths.swift */; };
 		03E0A86B261B5DDE00BD04B4 /* MWCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E0A86A261B5DDE00BD04B4 /* MWCaller.swift */; };
 		03E59DF62623A0F800787195 /* MWFavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E59DF52623A0F800787195 /* MWFavouriteViewController.swift */; };
+		10E6102B2624B3EA008BF60F /* MWDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10E610292624B3EA008BF60F /* MWDataModel.xcdatamodeld */; };
+		10E6102F2624B8BA008BF60F /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E6102D2624B8BA008BF60F /* Movie+CoreDataClass.swift */; };
+		10E610332624BD11008BF60F /* MWDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E610322624BD11008BF60F /* MWDataBase.swift */; };
+		10E610392624CF87008BF60F /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E610362624CF87008BF60F /* Category+CoreDataClass.swift */; };
+		10E610402624D02A008BF60F /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E6103E2624D02A008BF60F /* Movie+CoreDataProperties.swift */; };
+		10E6104C2624D177008BF60F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10E6104E2624D177008BF60F /* Localizable.strings */; };
+		10E6105D2624D481008BF60F /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E6105B2624D481008BF60F /* Category+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +76,15 @@
 		03E0A866261B51F800BD04B4 /* MWUrlPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWUrlPaths.swift; sourceTree = "<group>"; };
 		03E0A86A261B5DDE00BD04B4 /* MWCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWCaller.swift; sourceTree = "<group>"; };
 		03E59DF52623A0F800787195 /* MWFavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWFavouriteViewController.swift; sourceTree = "<group>"; };
+		10E6102A2624B3EA008BF60F /* MWDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MWDataModel.xcdatamodel; sourceTree = "<group>"; };
+		10E6102D2624B8BA008BF60F /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		10E610322624BD11008BF60F /* MWDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWDataBase.swift; sourceTree = "<group>"; };
+		10E610362624CF87008BF60F /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		10E6103E2624D02A008BF60F /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		10E6104A2624D13E008BF60F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		10E6104D2624D177008BF60F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		10E610502624D182008BF60F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		10E6105B2624D481008BF60F /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +163,7 @@
 		03C41DD52615DE2D0055D985 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				10E610282624B3C0008BF60F /* CoreData */,
 				03E0A869261B5DD200BD04B4 /* Sharing */,
 				03E0A856261B4EC300BD04B4 /* Network */,
 				03C41DE32615E1AA0055D985 /* Navigation */,
@@ -175,6 +192,7 @@
 		03C41DD82615DE440055D985 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				10E610452624D095008BF60F /* Localization */,
 				03C41DC32615DBFE0055D985 /* LaunchScreen.storyboard */,
 				03C41DC12615DBFE0055D985 /* Assets.xcassets */,
 				03C41DF22615FCAB0055D985 /* Colors.xcassets */,
@@ -336,6 +354,27 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		10E610282624B3C0008BF60F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				10E6105B2624D481008BF60F /* Category+CoreDataProperties.swift */,
+				10E610362624CF87008BF60F /* Category+CoreDataClass.swift */,
+				10E6103E2624D02A008BF60F /* Movie+CoreDataProperties.swift */,
+				10E6102D2624B8BA008BF60F /* Movie+CoreDataClass.swift */,
+				10E610292624B3EA008BF60F /* MWDataModel.xcdatamodeld */,
+				10E610322624BD11008BF60F /* MWDataBase.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		10E610452624D095008BF60F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				10E6104E2624D177008BF60F /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -381,6 +420,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 03C41DAC2615DBFC0055D985;
 			packageReferences = (
@@ -402,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C41DF32615FCAB0055D985 /* Colors.xcassets in Resources */,
+				10E6104C2624D177008BF60F /* Localizable.strings in Resources */,
 				03C41DC52615DBFE0055D985 /* LaunchScreen.storyboard in Resources */,
 				03C41DC22615DBFE0055D985 /* Assets.xcassets in Resources */,
 			);
@@ -414,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E610332624BD11008BF60F /* MWDataBase.swift in Sources */,
 				03C41DF82615FD6C0055D985 /* MWMoviesController.swift in Sources */,
 				03C41DBD2615DBFC0055D985 /* MWViewController.swift in Sources */,
 				03E0A858261B4ED700BD04B4 /* MWNetwork.swift in Sources */,
@@ -428,9 +470,13 @@
 				03E0A867261B51F800BD04B4 /* MWUrlPaths.swift in Sources */,
 				03C41DB92615DBFC0055D985 /* AppDelegate.swift in Sources */,
 				03E0A864261B50CA00BD04B4 /* Url+Ex.swift in Sources */,
+				10E610402624D02A008BF60F /* Movie+CoreDataProperties.swift in Sources */,
 				03E0A839261B476000BD04B4 /* MWMainTabBarController.swift in Sources */,
+				10E6102B2624B3EA008BF60F /* MWDataModel.xcdatamodeld in Sources */,
+				10E610392624CF87008BF60F /* Category+CoreDataClass.swift in Sources */,
 				03C41DE82615F0CD0055D985 /* MWInterface.swift in Sources */,
 				03C41DEF2615FAE10055D985 /* MWInitViewController.swift in Sources */,
+				10E6102F2624B8BA008BF60F /* Movie+CoreDataClass.swift in Sources */,
 				03E0A844261B482C00BD04B4 /* MWRowCell.swift in Sources */,
 				03BC4FD4261F48C100FFE6AF /* MWUpcomingResponseModel.swift in Sources */,
 				03E0A860261B4F3300BD04B4 /* MWErrors.swift in Sources */,
@@ -438,6 +484,7 @@
 				03BC4FD6261F48C100FFE6AF /* MWPopularMovieResponse.swift in Sources */,
 				03E0A86B261B5DDE00BD04B4 /* MWCaller.swift in Sources */,
 				03C41DDE2615E10E0055D985 /* UIView+Ex.swift in Sources */,
+				10E6105D2624D481008BF60F /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,8 +495,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				03C41DC42615DBFE0055D985 /* Base */,
+				10E6104A2624D13E008BF60F /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		10E6104E2624D177008BF60F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10E6104D2624D177008BF60F /* en */,
+				10E610502624D182008BF60F /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -459,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -520,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -667,6 +726,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		10E610292624B3EA008BF60F /* MWDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				10E6102A2624B3EA008BF60F /* MWDataModel.xcdatamodel */,
+			);
+			currentVersion = 10E6102A2624B3EA008BF60F /* MWDataModel.xcdatamodel */;
+			path = MWDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03C41DAD2615DBFC0055D985 /* Project object */;
 }
